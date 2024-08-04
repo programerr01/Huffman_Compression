@@ -1,0 +1,12 @@
+
+## Text Compression 
+Text Compression using Huffman encoding, in huffman encoding we use binary tree to store nodes which represent characters. Each character is assigned a binary code on the basis on how frequently it occurs in the given file. 
+Priority Queue is used for assigning value for each character. 
+
+Hufffman Encoding is variable length encoding scheme. 
+
+
+## Future Scope 
+
+- [ ] Adding command line utility instead of passing to the source file 
+- [ ] Adding Support for text file compression and decompression where you can specify the files 
