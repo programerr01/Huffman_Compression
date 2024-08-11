@@ -93,7 +93,7 @@ string Utility::decode_from_file(string s){
 			curr_str += s[i];
 		}
 	}
-	return final_out;
+	return final_out+"\n";
 }
 
 void Utility::decompress_and_save(){
