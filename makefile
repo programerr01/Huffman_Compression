@@ -21,5 +21,8 @@ heap.o : include/Heap.h src/Heap.cpp node.o
 node.o : include/Node.h src/Node.cpp
 	g++ -c src/Node.cpp -Iinclude -o node.o 
 
+test : 
+	chmod +x test.sh
+	./test.sh
 clean : 
 	rm -f *.o output
