@@ -1,10 +1,17 @@
+main : decompress_file compress_file
+	g++ node.o heap.o huffman.o utility.o decompress.o -o decompress
+	g++ node.o heap.o huffman.o utility.o compress.o -o compress
 
-run : main 
-	g++ node.o heap.o  huffman.o main.o  -o output
+decompress_file : decompress.cpp utility.o 
+	g++ -c decompress.cpp -Iinclude -o decompress.o
 
-main : main.cpp huffman.o 
-	g++ -c main.cpp -Iinclude -o main.o 
-	
+compress_file : compress.cpp utility.o 
+	g++ -c compress.cpp -Iinclude -o compress.o
+
+utility.o : include/Utility.h src/Utility.cpp huffman.o
+	g++ -c src/Utility.cpp -Iinclude -o utility.o
+
+
 huffman.o : include/Huffman.h src/Huffman.cpp heap.o 
 	g++ -c src/Huffman.cpp -Iinclude -o huffman.o
 

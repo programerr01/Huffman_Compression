@@ -13,9 +13,7 @@ class Node{
         Node(char c,int v);
         Node();
         bool operator>(const Node& other) const;
-        bool operator>=(const Node& other) const;
-        
-
+        bool operator>=(const Node& other) const; 
 
 };
 #endif

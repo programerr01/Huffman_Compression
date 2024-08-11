@@ -8,11 +8,8 @@
 class Heap{
     private:
         std::vector<Node*>hp;
-        
 		int last_pos;
-        
         void heapify(int indx);
-
         void handle_rm_min(int indx);
     
     public:

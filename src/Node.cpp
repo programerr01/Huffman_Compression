@@ -19,7 +19,8 @@
 
 bool Node::operator>(const Node& other)const {
     return this->val > other.val;
-    }
+}
+
 bool Node::operator>=(const Node& other) const {
     return this->val >= other.val;
 }

@@ -42,12 +42,13 @@ void Huffman::buildTree(){
     this->traverse(this->final_tree,"");
 
 }
+
 void Huffman::traverse(Node* n,string code_=""){
     if(!n){
         return;
     }
     if(n->ch != '\0'){
-        cout << n->ch << "=> " << code_ <<endl;
+        // cout << n->ch << "=> " << code_ <<endl;
         this->mapping[n->ch] = code_;
         this->rev_mapping[code_] = n->ch;
 
@@ -62,6 +63,10 @@ string Huffman::encode(){
         final_ += this->mapping[e];
     }
     return final_;
+}
+
+map<char,string> Huffman::getMapping(){
+	return this->mapping;
 }
 
 string Huffman::decode(string encoded_msg){

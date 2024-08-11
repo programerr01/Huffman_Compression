@@ -10,12 +10,12 @@
 
 class Huffman{
     private:
-		Heap* hp = new Heap();
-    std::string message ="";
-		std::vector<std::pair<int,char>> freq_map;
-		Node* final_tree;
-		std::map<char,std::string> mapping;
-		std::map<std::string,char> rev_mapping;
+      Heap* hp = new Heap();
+      std::string message ="";
+      std::vector<std::pair<int,char>> freq_map;
+      Node* final_tree;
+      std::map<char,std::string> mapping;
+      std::map<std::string,char> rev_mapping;
 
     public:
         Huffman(std::string s);
@@ -24,6 +24,7 @@ class Huffman{
         std::string encode();
         std::string decode(std::string message);
         void frequency_map(std::string words,std::vector<std::pair<int,char>>& freq_map);
+        std::map<char,std::string> getMapping();
 };
 
 
