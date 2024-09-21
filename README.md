@@ -29,3 +29,4 @@ Hufffman Encoding is variable length encoding scheme.
 - [x] Adding Support for text file compression and decompression where you can specify the files
 - [ ] Adding complete ascii support
 - [ ] Adding UTF-8 support 
+- [ ] Adding utility to get compression ratio for particular file 
